@@ -66,7 +66,7 @@ The associated network files are in the data directory, and are named ``twitter_
 
 > **Explore:** Open the files in Sublime Text and investigate their structure. In the ``.edges`` files, what are the sources and targets in the following, mentions, and retweets files?
 
-### Monolayer Analysis
+### Monolayer Analysis of Twitter Networks
 
 #### Using Gephi
 
@@ -118,12 +118,22 @@ The ``compare`` function in igraph will compute the variation of information bet
 
 > **Explore:** Use ``igraph-example-multi.R`` to compute the variation of information between each pair of networks after determining their communities.
 
-### Multilayer Analysis
-
-#### Using muxViz
+### Multilayer Analysis of Twitter Networks using muxViz
 
 Rather than consider each of the following, mentions, and retweets networks separately as monolayers, we can consider a multilayer representation of the network where the nodes are the users and the edges are colored based on the type of relationship: a following type, a retweet type, or a mention type.
 
 As you might expect, the analysis of a multilayer network generally takes more computing than the analysis of a multilayer network: the analysis of three layers is at least as hard as the analysis of each layer in isolation, and usually harder. Because of this, for the sake of run time, we will focus on the multilayer network constructed using the retweets and mentions monolayers.
+
+> **Pointer:** Be sure to put the ``twitter`` directory into ``muxViz-master/data`` before trying to import into muxViz.
+
+> **Explore:** Investigate the ``*_config.txt``, ``*_layout.txt``, and ``*_layout.txt`` files in the ``muxViz-master/data/twitter`` folder.
+
+> **Explore:** Open muxViz in RStudio. Select the ``twitter_mentions_config.txt`` config file, and load the monolayer into muxViz.
+
+> **Explore:** Experiment with using muxViz to analyze the network.
+
+> **Explore:** Create a ``*_config.txt`` file for the retweets network.
+
+> **Explore:** Load the retweets monolayer network into muxViz. 
 
 > **Explore:** Open muxViz in RStudio. Select the ``twitter_small-multiplex_config.txt`` config file (which includes only the retweets and mentions monolayers), and load the two monolayers into muxViz.

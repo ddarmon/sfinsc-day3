@@ -5,8 +5,8 @@ library(igraph)
 
 directed = TRUE
 
-link.type = 'following'
-# link.type = 'mentions'
+# link.type = 'following'
+link.type = 'mentions'
 # link.type = 'retweets'
 
 network = read_graph(sprintf("data/twitter_%s.graphml", link.type), format = 'graphml')
