@@ -122,6 +122,8 @@ As you may have noticed, Gephi can become sluggish as the density of the network
 
 Let's reproduce some of the analyses we did using Gephi in igraph, and perform some additional analyses.
 
+> **Pointer:** The R scripts I provided will assume that the network files are all in the ``data`` directory of the ``sfinsc-day3-master`` directory. Move the files in the shared Dropbox directory ``day3-data/data/for-gephi-network-files`` into the ``sfinsc-day3-master/data`` directory.
+
 > **Explore:** Run through the analysis in ``igraph-example-single.R`` line-by-line for the following, mentions, and retweet networks, and compare the results to those obtained using Gephi. To switch which edge type you consider, comment / uncomment the appropriate ``link.type`` lines.
 
 One of the strengths of igraph relative to Gephi is the inclusion of many methods for investigating the meso-scale structure of a network. igraph has many more community detection algorithms beyond Louvain. Let's use the 'fast-greedy algorithm' (the common name for the algorithm presented in [this paper](https://arxiv.org/abs/cond-mat/0408187) by Aaron Clauset, Mark Newman, and Cristopher Moore) to further investigate the community structure in the network.
