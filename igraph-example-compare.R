@@ -3,8 +3,6 @@
 
 library(igraph)
 
-directed = FALSE
-
 link.types = c('following', 'mentions', 'retweets')
 # link.types = c('mentions', 'retweets')
 
@@ -53,10 +51,10 @@ for (i in 1:(length(link.types)-1)){
 		# method = c("vi", "nmi", "split.join", "rand", "adjusted.rand")
 		vi = compare(membership.by.type[[link.types[i]]], membership.by.type[[link.types[j]]], method = 'vi')
 		vi.mat[i, j] = vi/(2*log2(length(V(network))))
+		
+		cat(sprintf('The variation of information between the %s and %s networks was: %s\n', link.types[i], link.types[j], vi.mat[i, j]))
 	}
 }
-
-show(vi.mat)
 
 image(vi.mat)
 

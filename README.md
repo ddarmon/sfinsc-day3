@@ -132,7 +132,7 @@ One way to quantify how similar the detected communities are in the following, m
 
 The ``compare`` function in igraph will compute the variation of information between two partitions of the same node set. 
 
-> **Explore:** Use ``igraph-example-multi.R`` to compute the variation of information between each pair of networks after determining their communities.
+> **Explore:** Use ``igraph-example-compare.R`` to compute the variation of information between each pair of networks after determining their communities.
 
 ### Multilayer Analysis of Twitter Networks using muxViz
 
