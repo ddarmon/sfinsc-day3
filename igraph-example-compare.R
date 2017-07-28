@@ -36,6 +36,8 @@ for (link.type in link.types){
   
   membership.by.nodes = membership(comms.fg)
   
+  vs.attributes = get.vertex.attribute(network)
+  
   inds.lex = order(vs.attributes$id)
   membership.sorted = membership.by.nodes[inds.lex]
   
@@ -53,6 +55,10 @@ for (i in 1:(length(link.types)-1)){
 		vi.mat[i, j] = vi/(2*log2(length(V(network))))
 	}
 }
+
+show(vi.mat)
+
+image(vi.mat)
 
 # Can perform permutation test to determine how likely the observed vi would be
 # assuming *no* association between the communities of the two networks.

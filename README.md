@@ -150,6 +150,8 @@ As you might expect, the analysis of a multilayer network generally takes more c
 
 > **Explore:** Create a ``*_config.txt`` file for the retweets network.
 
-> **Explore:** Load the retweets monolayer network into muxViz. 
+> **Explore:** Load the retweets monolayer network into muxViz. Experiment with using muxViz to analyze the network.
 
-> **Explore:** Select the ``twitter_small-multiplex_config.txt`` config file (which includes only the retweets and mentions monolayers), and load the two monolayers into muxViz.
+> **Explore:** Select the ``twitter_small-multiplex_config.txt`` config file (which includes only the retweets and mentions monolayers), and load the two monolayers into muxViz as a multilayer network.
+
+> **Explore:** Experiment with using muxViz to analyze the multilayer network.
