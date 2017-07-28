@@ -26,6 +26,8 @@ This script will install all of the R libraries required by muxViz. This may tak
 
 ### Possible Bugs
 
+#### Missing Packages
+
 muxViz is designed for version 3.2 of R. Therefore, some of the packages may not load correctly with version 3.4 of R.
 
 If you get the error
@@ -34,9 +36,21 @@ If you get the error
 
 run
 
-> devtools::install_github("ShinyDash", "trestletech")
+> require(devtools)
+> install_github("ShinyDash", "trestletech")
 
 in the Console to install ShinyDash.
+
+If you get the error
+
+> Error in library(rCharts) : there is no package called ‘rCharts’
+
+run
+
+> require(devtools)
+> install_github('rCharts', 'ramnathv')
+
+#### Java Error in Mac OS
 
 If you are running Mac OS and run into a problem with rJava, run
 
@@ -96,7 +110,7 @@ We have investigated some of the properties of the Twitter following network. Bu
 
 Let's investigate the other Twitter networks in Gephi.
 
-> **Exercise**: Investigate each of the mentions and retweets network, using some of the analyses above. In particular, you might investigate the general meso-scale structure, link density, in-/out-degrees, and community structure in the different networks. 
+> **Exercise**: Investigate each of the following and retweets network, using some of the analyses above. In particular, you might investigate the general meso-scale structure, link density, in-/out-degrees, and community structure in the different networks. 
 
 > **Hint:** When comparing various monolayer representations of the same network, it can be handy to use the Workspaces functionality of Gephi. When importing a new network, first create a new Workspace by selecting Workspace > New. You can also rename the Workspace (for example, to Following, Mentions, or Retweets) by selecting Workspace > Rename.
 
@@ -126,7 +140,7 @@ As you might expect, the analysis of a multilayer network generally takes more c
 
 > **Pointer:** Be sure to put the ``twitter`` directory into ``muxViz-master/data`` before trying to import into muxViz.
 
-> **Explore:** Investigate the ``*_config.txt``, ``*_layout.txt``, and ``*_layout.txt`` files in the ``muxViz-master/data/twitter`` folder.
+> **Explore:** Investigate the ``*_config.txt``, ``*_layout.txt``, and ``*_layout.txt`` files in the ``muxViz-master/data/twitter`` folder. Use Sublime Text to open these files.
 
 > **Explore:** Open muxViz in RStudio. Select the ``twitter_mentions_config.txt`` config file, and load the monolayer into muxViz.
 
