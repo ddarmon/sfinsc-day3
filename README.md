@@ -136,4 +136,4 @@ As you might expect, the analysis of a multilayer network generally takes more c
 
 > **Explore:** Load the retweets monolayer network into muxViz. 
 
-> **Explore:** Open muxViz in RStudio. Select the ``twitter_small-multiplex_config.txt`` config file (which includes only the retweets and mentions monolayers), and load the two monolayers into muxViz.
+> **Explore:** Select the ``twitter_small-multiplex_config.txt`` config file (which includes only the retweets and mentions monolayers), and load the two monolayers into muxViz.
